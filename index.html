@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/img/asd.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Colombia</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="miembros">
+            <div class="online-indicator"></div>
+            <h2 id="miembros"></h2>
+        </div>
+        <h1>CA COLOMBIA</h1>
+
+        <label class="tema">
+            <input type="checkbox" id="halloweenTema">
+            <span class="slider">
+                <img src="assets/img/pumpkin.png" alt="Calabaza" class="pumpkin-icon">
+            </span>
+        </label>  
+
+        <div class="barras-caja">
+            <div class="barras-header" id="accordionHeader">
+                <div class="barras-icon">
+                    <div class="barras"></div>
+                    <div class="barras"></div>
+                    <div class="barras"></div>
+                </div>
+            </div>
+            <div class="barras-contenido" id="accordionContent">
+                <p><a href="https://discord.com/channels/1042099714608345159/1042099719041720397" target="_blank">Dudas</a></p>
+                <p><a href="https://discord.com/channels/1042099714608345159/1042099719041720395" target="_blank">Contacto</a></p>
+                 <p><a href="https://www.cacolombia.website/notas.html" target="_blank">desarrollo</a></p>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="caja-banner">
+        <a target="_blank">
+        <img src="assets/img/BANNER4.png" id="banner"></a>
+        <div class="logo">
+            <a href="https://discord.gg/cacolombiarp" target="_blank">
+                <img src="assets/img/asd.png" id="logo"> </a>
+        </div>
+    </div>
+<!-- Barra navegacion -->
+    <nav>
+        <ul>
+            <li><a href="./police-page.html" target="_blank">
+                <img src="assets/img/ponal.png" alt="Ponal"> </a></li>
+            <li><a href="https://www.cacolombia.website/cti-page/" target="_blank">
+                <img src="assets/img/cti.png" alt="CTI"> </a></li>
+             <li><a href="./bombero/index.html" target="_blank">
+                <img src="assets/img/logobomberos.webp" alt="bomberos"> </a></li>
+            <li><a id="toggleButton">
+                <img src="assets/img/trabajo.png" alt="Cambia trabajos"> </a></li>
+            <ti><a href="https://www.youtube.com/@cacolombiarp/videos" target="_blank">
+                <img src="assets/img/Youtube.png" alt="Youtube"> </a></ti>
+            <ti><a href="https://www.tiktok.com/@cacolombiarp" target="_blank">
+                <img src="assets/img/titok.png" alt="Tiktok"> </a></ti>
+        </ul>
+    </nav>
+<!-- Barra navegacion final -->
+<div class="container-main">
+<main>
+<!-- Eventos -->
+    <div class="caja-evento">
+        <section id="evento">
+            <h2>EVENTOS</h2>
+            <h2><mini>Basado en el canal de eventos</mini></h2>
+            <div class="evento">
+                <h3>CA TOUR</h3>
+                <p>Fecha: 12 de Octubre</p>
+                <img href="" src="assets/img/catour.jpg" alt="">
+                <p>A lo largo de los meses se haran diferentes conciertos musicales, así como premios, etc.</p>
+                <a href="https://discord.com/channels/1042099714608345159/1289249525546090496" target="_blank">Más información</a>
+            </div>
+            <div class="evento">
+                <h3>Proximamente</h3>
+                <p>Fecha: N/A</p>
+                <p>Proximamente.</p>
+            <!-- <a href="#" style="color: #eed12f; text-decoration: underline;">Más información</a> -->
+            </div>
+            <div class="evento">
+                <h3>Proximamente</h3>
+                <p>Fecha: N/A</p>
+                <p>Proximamente.</p>
+            <!-- <a href="#" style="color: #eed12f; text-decoration: underline;">Más información</a> -->
+            </div>
+        </section>
+    </div>
+<!-- Eventos final -->
+ 
+<!-- Empresas -->
+    <div id= empresas class="container-empresas hidden">
+        <section>
+            <div class="heading">
+                <h2>EMPRESAS</h2>
+                <mini>Basado en el canal de empresas</mini>
+            </div>
+            <div class="caja-empresas">
+                <div class="empresas">
+                    <h3>Knotrix</h3>
+                    <p>Tienda Electronica</p>
+                    <img href="" src="assets/img/knx.jpg" alt="">
+                    <p class="empresa" data-completo="Es una empresa eléctronica encargada de fabricar todo tipo de productos electrónicos y venderlos a los ciudadanos y empresas, la idea es vender cámaras de seguridad, computadores y teléfonos a las empresas y ciudadanos">Es una empresa eléctronica encargada de fabricar todo tipo de productos electrónicos y venderlos a los ciudadanos y empresas, la idea es vender cámaras de seguridad, computadores y teléfonos a las empresas y ciudadanos</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/3MZjJx5YFx" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Juan Valdez</h3>
+                    <img href="" src="assets/img/juan.png" alt="">
+                    <p class="empresa" data-completo="Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa">Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa</p> <!-- Texto completo -->
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/wCG6duJrrj" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Barba Fina</h3>
+                    <img href="" src="assets/img/barba.png" alt="">
+                    <a href="https://discord.gg/3zUtCmMqvx" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Andres Carne de Res</h3>
+                    <img href="" src="assets/img/qudres.png" alt="">
+                    <a href="https://discord.gg/4tqmpEvhNW" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Rappi</h3>
+                    <img href="" src="assets/img/rappi.png" alt="">
+                    <p class="empresa" data-completo="Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa">Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/fSAWrEeTZj" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Alzxte's Joyas</h3>
+                    <img href="" src="assets/img/alz.jpg" alt="">
+                    <p class="empresa" data-completo="Es una empresa distribuidora de joyas a todo cali, su nombre es Alzxte's Joyas">Es una empresa distribuidora de joyas a todo cali, su nombre es Alzxte's Joyas</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/H9Q4WuhTUe" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>El Rincon Mexicano</h3>
+                    <p>Restaurante Mexicano</p>
+                    <img href="" src="assets/img/mexicano.png" alt="">
+                    <p class="empresa" data-completo="Un restaurante, basado en mexico.">Un restaurante, basado en mexico.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.com/invite/M9MhU936rq" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Mobil</h3>
+                    <img href="" src="assets/img/mobil.png" alt="">
+                    <p class="empresa" data-completo="En Mobil, nos enorgullece ofrecerte combustibles de la más alta calidad, diseñados para mejorar el rendimiento de tu vehículo y garantizar una conducción más eficiente y segura.">En Mobil, nos enorgullece ofrecerte combustibles de la más alta calidad, diseñados para mejorar el rendimiento de tu vehículo y garantizar una conducción más eficiente y segura.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/cvc352CNF7" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Coalición de Transporte</h3>
+                    <img href="" src="assets/img/taxi.png" alt="">
+                    <p class="empresa" data-completo="Coalición de Transporte Universal de Cali es una empresa de transporte público de la ciudad de Cali.">Coalición de Transporte Universal de Cali es una empresa de transporte público de la ciudad de Cali.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/kTWHQ7svt2" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3> Wolfshield Defense Co</h3>
+                    <img href="" src="assets/img/wolf.png" alt="">
+                    <p class="empresa" data-completo="Nos especializamos en ofrecer soluciones avanzadas de seguridad y protección.">Nos especializamos en ofrecer soluciones avanzadas de seguridad y protección.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/npGmadNXrD" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Garcia's Store</h3>
+                    <img href="" src="assets/img/garcia.png" alt="">
+                    <p class="empresa" data-completo="Es una empresa hecha con fines de vender celulares, drones alguna variedad de sus productos son Samsung, Apple, drones con marca DJI">Es una empresa hecha con fines de vender celulares, drones alguna variedad de sus productos son Samsung, Apple, drones con marca DJI</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/Pu82KjMdCr" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Texaco</h3>
+                    <img href="" src="assets/img/texaco.png" alt="">
+                    <p class="empresa" data-completo="Es una marca líder en la industria de combustibles, reconocida por su calidad, confiabilidad y más de un siglo de experiencia. ">Es una marca líder en la industria de combustibles, reconocida por su calidad, confiabilidad y más de un siglo de experiencia. </p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/S3A7vpegwC" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>JMC Blindajes</h3>
+                    <p>Taller Mecánico de Springfield</p>
+                    <img href="" src="assets/img/jmc.png" alt="">
+                    <p class="empresa" data-completo="Es un taller automotriz que se enfoca en blindajes de alto calibre, y tecnomecanica a automóviles de alto precio, también se hace cambios, arreglos a todo tipo de vehiculo">Es un taller automotriz que se enfoca en blindajes de alto calibre, y tecnomecanica a automóviles de alto precio, también se hace cambios, arreglos a todo tipo de vehiculo</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/GDnbmhuhJT" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Bancolombia</h3>
+                    <img href="" src="assets/img/banco.png" alt="">
+                    <p class="empresa" data-completo="es una institución financiera innovadora y comprometida con el bienestar de sus clientes.">es una institución financiera innovadora y comprometida con el bienestar de sus clientes.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/nZq7hKdBCC" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Prosegur</h3>
+                    <img href="" src="assets/img/prose.png" alt="">
+                    <p class="empresa" data-completo="Es una empresa del sector privado de la seguridad, fundada en 1786 en España. ">Es una empresa del sector privado de la seguridad, fundada en 1786 en España. </p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/yZtvN3rsx6" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Technical S.A.S</h3>
+                    <p>Gasolinera</p>
+                    <img href="" src="assets/img/terpel.png" alt="">
+                    <a href="https://discord.gg/qWFSzYv8j5" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Global Armor Blindaje y Protección</h3>
+                    <img href="" src="assets/img/global.png" alt="">
+                    <p class="empresa" data-completo="Global Armor Blindaje y Protección, se dedica a ofrecer soluciones integrales de seguridad a través de la fabricación, instalación y mantenimiento de sistemas de blindaje.">Global Armor Blindaje y Protección, se dedica a ofrecer soluciones integrales de seguridad a través de la fabricación, instalación y mantenimiento de sistemas de blindaje.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/qvbbAMdYd3" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Security Breach</h3>
+                    <img href="" src="assets/img/security.png" alt="">
+                    <p class="empresa" data-completo="Ofrecemos variedad de trabajos también ¿No crees que somos los mejores? Ven y descúbrelo.">Ofrecemos variedad de trabajos también ¿No crees que somos los mejores? Ven y descúbrelo.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.com/invite/E463QDShYM" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Subastas Colombia</h3>
+                    <img href="" src="assets/img/subasta.jpg" alt="">
+                    <p class="empresa" data-completo="Gana las mejores subastas de bodegas con articulos aleatorios! Hazte socio para tener subastas premium y ganar mejores premios">Gana las mejores subastas de bodegas con articulos aleatorios! Hazte socio para tener subastas premium y ganar mejores premios</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/YGbxqWpjga" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Noticias RCN</h3>
+                    <img href="" src="assets/img/noticias.png" alt="">
+                    <a href="https://discord.gg/P4V3sdpNce" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Starbucks</h3>
+                    <img href="" src="assets/img/starbucks.png" alt="">
+                    <p class="empresa" data-completo="Es una empresa de Cafe, Donde vendemos Cafe, Croissant, Donas y muchas mas cosas!">Es una empresa de Cafe, Donde vendemos Cafe, Croissant, Donas y muchas mas cosas!</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/58UKBwWxGZ" target="_blank">Más información</a>
+                </div>
+                <div class="empresas">
+                    <h3>Triple A</h3>
+                    <img href="" src="assets/img/riple.png" alt="">
+                    <p class="empresa" data-completo="Triple A es una empresa de Acueducto, Alcantarillado,Aseo S.A, y electricidad.">Triple A es una empresa de Acueducto, Alcantarillado,Aseo S.A, y electricidad.</p>
+                    <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
+                    <a href="https://discord.gg/BmrWxPBsqu" target="_blank">Más información</a>
+                </div>
+            </div>    
+        </section>
+    </div>
+<!-- Empresa final -->
+
+<!-- Trabajos -->
+    <div id="trabajos" class="container-trabajos">
+        <section>
+            <div class="heading">
+                <h2>TRABAJOS</h2>
+                <h2><mini>Basado en el canal de mintrabajos</mini></h2>
+            </div>
+            <div class="caja-trabajos">
+                <div class="trabajos">
+                    <h3>Paramedico / Medico</h3>
+                    <p>Hospital</p>
+                    <img href="" src="assets/img/sura.png" alt="">
+                    <a href="https://discord.gg/PmK9wBJwVm?dhc-id=81853813656391729" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Mecanico</h3>
+                    <p>Zona de mecanicos</p>
+                    <img href="" src="assets/img/meca.png" alt="">
+                    <a href="https://discord.gg/CSq7CPFsGW?dhc-id=81854734285148174" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Taxi / Bus</h3>
+                    <p>Zona de taxi</p>
+                    <img href="" src="assets/img/taxi1.png" alt="">
+                    <a href="https://discord.gg/qpcQfHSMdJ?dhc-id=81855145121419291" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Abogado / Juez</h3>
+                    <p>Juego externo</p>
+                    <img href="" src="assets/img/juez.png" alt="">
+                    <a href="https://discord.gg/jBy2fZypcC?dhc-id=81855433911832679" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Periodista</h3>
+                    <p>Zona de noticiero</p>
+                    <img href="" src="assets/img/rcn.png" alt="">
+                    <a href="https://discord.gg/E6T8mYsf3W?dhc-id=81855775722442823" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Alcaldia</h3>
+                    <p>Juego externo</p>
+                    <img href="" src="assets/img/alcaldia.jpg" alt="">
+                    <a href="https://discord.com/invite/aawbmeWAFs?dhc-id=81856115804999761" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Guardia de prision</h3>
+                    <p>Prision</p>
+                    <img href="" src="assets/img/inpec.png" alt="">
+                    <a href="https://discord.com/invite/bMYJTJ7dSX?dhc-id=81856435675205748" target="_blank">Más información</a>
+                </div>
+                <div class="trabajos">
+                    <h3>Bombero</h3>
+                    <p>Zona de bomberos</p>
+                    <img href="" src="assets/img/bombero.png" alt="">
+                    <a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723" target="_blank">Más información</a>
+                </div>
+
+            </div>
+        </section>
+    </div>
+<!-- Trabajos final -->
+
+<!-- Perfiles -->
+    <section id="perfiles">
+        <div class="caja-perfil">
+                <div class="perfil" id="seccion1" >
+                    <h2>LeYuiKa</h2>
+                    <rol>Dev</rol>
+                    <a href="https://www.roblox.com/users/312978547/profile" target="_blank">
+                    <img id="avatar1" src="" alt="LeYuiKa"></a>
+                </div>
+                <div class="perfil" id="seccion2">
+                    <h2>Santiago Restrepo</h2>
+                    <rol>Creador</rol>
+                    <a href="https://www.roblox.com/users/1413431128/profile" target="_blank">
+                    <img id="avatar2" src="" alt="Propoli"></a>
+                </div>
+                <div class="perfil" id="seccion3">
+                    <h2>Joses</h2>
+                    <rol>Co-Creador</rol>
+                    <a href="https://www.roblox.com/users/835636047/profile" target="_blank">
+                    <img id="avatar3" src="" alt="Joses"></a>
+                </div>
+            </div>
+    </section>
+<!-- Perfiles final -->
+</main>
+</div>
+
+<footer>
+    <p>&copy; Página exclusiva de [CA] Colombia ER:LC</p>
+    <p>&copy; 2024 CA Colombia | MAIN. Todos los derechos reservados a CA hecho por la desarrolladora leyui</p>
+</footer>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/avatar.js"></script> 
+<script src="assets/js/ocultar.js"></script> 
+<script src="assets/js/halloween-bats.js"></script> 
+<script src="assets/js/halloweenBats.js"></script> 
+<script src="assets/js/leermas.js"></script> 
+<script src="assets/js/miembros.js"></script> 
+<script src="assets/js/barra.js"></script> 
+
+</body>
+</html>

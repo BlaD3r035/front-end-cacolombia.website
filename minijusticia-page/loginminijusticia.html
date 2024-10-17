@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ministerio de Justicia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../police-page.html">Inicio</a></li>
+                <li><a href="https://depjusticia-cacolombia.gitbook.io/inicio">minijusticia</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+   
+    <div class="login-container">
+        
+        <div class="login-box" id="login-box">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <div class="input-box">
+                    <input id="usernameLoginMinijusticia" type="text" required>
+                    <label>Usuario</label>
+                </div>
+                <div class="input-box">
+                    <input id="passwordLoginMinijusticia" type="password" required>
+                    <label>Contraseña</label>
+                </div>
+                <button onclick="loginMinijusticia()" id="login-btn-minijusticia" type="button" class="login-btn">Ingresar</button>
+                <p class="forgot-password"><a href="" id="forgot-password-link">¿Olvidaste tu contraseña?</a></p>
+                <p class="forgot-password"><a href="" id="register-link">Registrarse</a></p>
+                <button onclick="window.location.href = '../index.html'" type="button" class="login-btn">Regresar</button>
+            </form>
+        </div>
+
+            
+        <div class="forgot-password-panel" id="forgot-password-panel">
+            <h2>Recuperar Contraseña</h2>
+            <p>Para recuperar tu contraseña, comunicate con el desarrollador blad3r035 en discord </p>
+            <p class="back-to-login"><a href="#" id="back-to-login">Regresar al inicio de sesión</a></p>
+        </div>
+
+       
+        <div class="register-box" id="register-box">
+            <h2>Registrarse</h2>
+            <form action="">
+                <div class="input-box">
+                    <input id="usernameRegisterMinijusticia" type="text" required>
+                    <label>Usuario</label>
+                </div>
+                <p>cual es su función y porqué se quiere registrar?</p>
+                <br>
+                <div class="input-box">
+                    <input id="functionRegisterMiniJusticia" type="text" required>
+                    <label>motivo</label>
+                </div>
+                <div class="input-box">
+                    <input id="passwordRegisterMinijusticia" type="password" required>
+                    <label>Contraseña</label>
+                </div>
+                <div class="input-box">
+                    <input id="confirmPasswordRegisterMinijusticia" type="password" required>
+                    <label>Confirmar Contraseña</label>
+                </div>
+                <button onclick="registerMinijusticia()" id="register-btn-minijusticia" type="submit" class="login-btn">Registrarse</button>
+                <p class="back-to-login"><a href="#" id="back-to-login-from-register">Regresar al inicio de sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

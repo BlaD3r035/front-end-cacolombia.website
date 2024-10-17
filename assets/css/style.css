@@ -1,0 +1,916 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(185, 185, 185);
+    overflow-x: hidden; 
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Caja superior */
+header {
+    background: #333;
+    color: rgb(255, 255, 255);
+    font-size: medium;
+    padding: 5px 20px; 
+    display: flex;
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    right: 4%;
+}
+
+/* Caja barra */
+.barras-caja {
+    position: relative;
+    top: 16px;
+    left: 10px;
+}
+
+.barras-header {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.barras-icon {
+    width: 30px; 
+    margin-right: 10px; 
+}
+
+.barras {
+    height: 3px;
+    background-color: white;
+    margin: 4px 0; 
+    transition: background-color 0.3s; 
+}
+
+.barras-contenido {
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 87%;
+    width: 110%;
+    left: -70%; 
+    padding: 10px;
+    background-color: #444; 
+    border-radius: 8px; 
+    z-index: 4; 
+}
+
+.barras-contenido a {
+    color: white; 
+    text-decoration: none; 
+}
+
+.barras-contenido a:hover {
+    text-decoration: underline; 
+}
+
+.barras-contenido.active {
+    display: block;
+}
+
+/* boton halloween */
+    .tema {
+        position: relative;
+        width: 60px;
+        height: 34px;
+        top: 23px;
+    }
+
+    .tema input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: background-color 0.4s;
+        border-radius: 34px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 34px;
+        width: 60px; 
+        left: 0; 
+        bottom: 0;
+        transition: transform 0.4s;
+    }
+
+    .tema input:checked + .slider {
+        background-color: #ff9e00;
+    }
+
+    .pumpkin-icon {
+        position: absolute;
+        top: -2px; 
+        left: 2px; 
+        width: 30px; 
+        height: auto; 
+        transition: transform 0.4s;
+    }
+
+    .tema input:checked + .slider .pumpkin-icon {
+        transform: translateX(26px); 
+    }
+
+    .miembros {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: #444;
+        border-radius: 8px;
+        padding: 5px;
+        height: 35px;
+        top: 18px;
+    }
+
+    .miembros .online-indicator {
+        width: 17px;
+        height: 17px;
+        background-color: rgb(0, 255, 0);
+        border-radius: 50%; 
+        margin-right: 10px; 
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; } 
+        50% { opacity: 0; } 
+    }
+
+/* Caja banner */
+    .caja-banner {
+        background-color: #333;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .caja-banner a {
+        display: block;
+        height: 50vh;
+        width: 100%;
+    }
+
+    .caja-banner img {
+        display: block;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        color: rgba(0, 0, 0, 0.8); 
+        position: relative; 
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .logo {
+        left: 51%; 
+        top: 0;
+        position: absolute;
+        transform: translateX(-50%); 
+    }
+    
+    .logo img {
+        max-width: 100%;  
+        height: 100%;    
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease-in-out;
+    }
+    
+    .logo img:hover {
+        transform: scale(1.02);
+    }
+    
+
+/* Caja navegacion */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+        nav ul li {
+            float: left;
+        }
+        nav ul ti {
+            float: right;
+        }
+            nav ul li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                cursor: pointer;
+                text-decoration: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+                nav ul li a:hover {
+                    transform: scale(1.1);
+                }
+
+                    nav ul li a img {
+                        width: 48px;
+                        height: 48px;
+                    }
+
+            nav ul ti a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 26px;
+                text-decoration: none;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+                nav ul ti a img {
+                    width: auto;
+                    height: 45px;
+                }
+
+                nav ul ti a:hover {
+                    transform: scale(1.1);
+                }
+                
+/* Caja perfil */
+    .caja-perfil {
+        position: relative;
+        text-align: center;
+        width: 18%; 
+        color: rgb(255, 255, 255); 
+        border-radius: 8px; 
+        float: right;
+        right: 11%;
+        margin: 0;
+    }
+    .caja-perfil h2 {
+        margin: 0;
+    }
+                
+    .caja-perfil p {
+        margin: 5px 0; 
+    }
+                
+    .caja-perfil a {
+        display: inline-block; 
+        margin-top: 10px; 
+    }
+ 
+    .perfil {
+        font-size: small;
+        background-color: #333; 
+        color: white; 
+        padding: 20px; 
+        border-radius: 15px; 
+        max-width: 62%;
+        text-align: center;
+        margin: 8px 10px;
+    }
+                
+    .perfil a {
+        transition: transform 0.2s ease; 
+    }
+                
+    .perfil a:hover {
+        transform: scale(1.1);
+    }
+                
+    .perfil img {
+        max-width: 90%;
+        height: auto; 
+        border-radius: 10px;
+        margin: 0;
+        object-fit: cover;
+    }
+
+/* Caja eventos */
+    .caja-evento {
+        position: relative;
+        text-align: center;
+        width: 25%; 
+        background-color: rgba(50, 50, 50, 0.9); 
+        color: rgb(255, 255, 255); 
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px;
+        float: right;
+        right: 0.5%;
+        margin: 0;
+    }
+
+    .caja-evento h2 {
+        margin: 0;
+    }
+                
+    .caja-evento p {
+        margin: 5px 0; 
+    }
+                
+    .caja-evento a {
+        display: inline-block; 
+        margin-top: 10px; 
+        color: #eed12f;
+
+    }
+
+    .evento {
+        background-color: rgba(88, 88, 88, 0.8); 
+        color: white;
+        padding: 15px;
+        border-radius: 8px; 
+        margin: 15px 0; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.40);
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+    }
+    .evento:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    }
+                
+    .evento h3 {
+        margin: 0;
+    }
+                
+    .evento p {
+        margin: 5px 0; 
+    }
+    .evento img {
+        max-width: 100%;
+        height: auto; 
+        border-radius: 10px; 
+        margin-bottom: 10px; 
+        object-fit: cover; 
+    }
+/* Caja empresas */
+    .container-empresas{
+        position: relative;
+        gap: 3%;
+        width: 40%;
+        background-color: rgba(50, 50, 50); 
+        padding: 20px; 
+        border-radius: 8px;
+        float: right;
+        top: 50%;
+        right: 8%;
+        color: #fff;
+        z-index: 1;
+    }
+                
+    .container-empresas .heading{
+        color: #fff;
+        text-align: center;
+        position: relative;
+        margin-right: auto;
+        padding: 0px 10px 10px;
+    }
+                
+    .container-empresas .caja-empresas{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+                
+    .container-empresas .caja-empresas .empresas{
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.40);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 5px;
+        background-color: rgba(88, 88, 88, 0.8);
+        text-align: center;
+        padding: 5px 10px;
+    }
+                
+    .container-empresas .caja-empresas .empresas:hover {
+        transform: scale(1.03); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+    }
+    .container-empresas .caja-empresas .empresas img {
+        max-width: 100%; 
+        height: auto; 
+        border-radius: 10px; 
+        margin-bottom: 10px;
+        margin-top: 10px; 
+        object-fit: cover; 
+    }
+
+    .container-empresas h2 {
+        margin: 10px; 
+    }
+    .caja-empresas h2 {
+        margin: 0; 
+    }
+                
+    .caja-empresas p {
+        margin: 5px 0; 
+    }
+                
+    .caja-empresas .empresas a {
+        display: inline-block;
+        margin-top: 10px; 
+        color: #eed12f;
+    }
+
+    .empresas h3 {
+        margin: 0; 
+    }
+                
+    .empresas p {
+        margin: 10px 0; 
+    }
+
+    .empresas button {
+        display: flex;
+        position: relative;
+        background-color: transparent;
+        color: #eed12f;
+        border: none;
+        font-size: small;
+        text-align: center;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;   
+        margin: 0 auto;     
+    }
+                
+/* Caja trabajos */
+    .container-trabajos{
+        position: relative;
+        gap: 3%;
+        width: 40%;
+        background-color: rgba(50, 50, 50);
+        padding: 20px;
+        border-radius: 8px;
+        float: right;
+        top: 50%;
+        right: 8%;
+        color: #fff;
+        z-index: 2;
+    }
+    
+    .container-trabajos .heading{
+        color: #fff;
+        text-align: center;
+        position: relative;
+        margin-right: auto;
+        padding: 0px 10px 10px;
+    }
+                
+    .container-trabajos .caja-trabajos{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+                
+    .container-trabajos .caja-trabajos .trabajos{
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.40);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 5px;
+        background-color: rgba(88, 88, 88, 0.8);
+        text-align: center;
+        padding: 5px 10px;
+    }
+                
+    .container-trabajos .caja-trabajos .trabajos:hover {
+        transform: scale(1.03);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+    .container-trabajos .caja-trabajos .trabajos img {
+        max-width: 100%;
+        height: auto; 
+        border-radius: 10px; 
+        margin-bottom: 10px;
+        margin-top: 10px;
+        object-fit: cover;
+    }
+
+    .container-trabajos h2 {
+        margin: 10px;
+    }
+    .caja-trabajos h2 {
+        margin: 0;
+    }
+                
+    .caja-trabajos p {
+        margin: 5px 0;
+    }
+                
+    .caja-trabajos .trabajos a {
+        display: inline-block; 
+        margin-top: 10px; 
+        color: #eed12f;
+    }
+
+    .trabajos h3 {
+        margin: 0;
+    }
+                
+    .trabajos p {
+        margin: 10px 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+/*  animación de deslizamiento */
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0); 
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOut {
+        0% {
+            transform: translateY(0); 
+            opacity: 1; 
+        }
+        100% {
+            transform: translateY(-5px); 
+            opacity: 0;
+        }
+    }
+
+/* Caja empresa animacion */
+    .container-empresas,
+    .container-trabajos {
+        opacity: 1; 
+        transition: opacity 0.5s ease; 
+    }
+
+    .container-empresas.hidden,
+    .container-trabajos.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .container-empresas:not(.hidden),
+    .container-trabajos:not(.hidden) {
+        pointer-events: auto;
+    }
+    .container-empresas:not(.hidden) {
+        animation: slideIn 0.5s forwards;
+    }
+
+    .container-trabajos:not(.hidden) {
+        animation: slideIn 0.5s forwards;
+    }
+
+    .container-empresas.hidden {
+        animation: slideOut 0.5s forwards;
+    }
+
+    .container-trabajos.hidden {
+        animation: slideOut 0.5s forwards;
+    }
+
+/* Animación de cambio de color */
+    body,
+    .perfil,
+    .evento,
+    .empresas,
+    .trabajos,
+    .container-empresas,
+    .container-trabajos,
+    nav,
+    banner,
+    header,
+    .caja-evento {
+        transition: background-color 0.5s ease;
+    }
+
+/* Caja elementos */
+    .container-main {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+@media only screen and (max-width: 480px) { 
+    h1 {
+        font-size: large;
+        left: 3px;
+    }
+    
+    h2 {
+        font-size: x-small;
+    }
+
+    .miembros {
+        position: relative;
+        right: 3%;
+        top: 0;
+    }
+
+    .tema {
+        width: 35px;
+        height: 20px;
+        top: 12px;
+    }
+
+    .slider:before {
+        width: 35px;
+        height: 20px;
+    }
+
+    .tema input:checked + .slider .pumpkin-icon {
+        transform: translateX(13px); 
+    }
+
+    .pumpkin-icon {
+        top: -0.5px; 
+        width: 17px; 
+    }
+
+    .miembros .online-indicator {
+        width: 5px;
+        height: 5px;
+    }
+
+    .barras-caja {
+        top: 0;
+        left: 12px;
+    }
+        .barras-icon {
+        width: 20px; 
+        margin-right: 7px; 
+    }
+    
+    .barras-contenido {
+        top: 108%;
+        padding: 7px; 
+    }
+
+    .barras-contenido p {
+        font-size: x-small;
+    }
+
+/* banner */
+    .caja-banner a {
+        height: auto;
+        margin: -1px;
+        width: 100%;
+    }    
+    
+    .caja-banner img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+/* Barra navegacion */
+    nav ul li a {
+        padding: 14px 10px;
+    }
+        
+    nav ul li a img {
+        width: 32px;
+        height: 32px;
+    }
+        
+    nav ul ti a {
+        padding: 14px 15px;
+    }
+        
+    nav ul ti a img {
+        height: 32px;
+    }
+/* Caja perfil */
+    .caja-perfil {
+        width: 25%;
+        right: 5%;
+    }
+        
+    .perfil {
+        padding: 5px; 
+        max-width: 100%;
+    }
+
+    .perfil h2 {
+        font-size:small;                        
+    }
+
+    .perfil  rol {
+        font-size:xx-small;                        
+    }
+                        
+    .perfil img {
+        max-width: 100%;
+    }
+/* Caja evento */
+    .caja-evento {
+        font-size: smaller;
+        width: 20%;
+        float: right;
+        right: -3%;
+    }
+        
+    .caja-evento h2 {
+        font-size:x-small;                        
+    }
+                        
+    .caja-evento a {
+        font-size: 0.5em;        
+    }
+
+    .evento {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+        padding: 2px;
+    }
+                        
+    .evento h3 {
+        margin-bottom: -5px;
+        font-size:x-small;                        
+        margin: 0;
+    }
+                        
+    .evento p {
+        font-size: 0.5em;
+        margin-bottom: 1px;
+    }
+/* Caja empresas */
+    .container-empresas{
+        position: relative;
+        width: 134px;
+        right: 2%;
+    }
+                        
+    .container-empresas .caja-empresas{
+        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+        gap: 8px;
+    }
+        
+    .container-empresas h2 {
+        font-size: small;
+    }
+
+    .container-empresas rol {
+        font-size: xx-small;
+    }
+
+    .caja-empresas h2 {
+        font-size: xx-small;
+    }
+                        
+    .caja-empresas .empresas a {
+        font-size: 0.1em;
+    }
+        
+    .empresas h3 {
+        font-size: xx-small;
+    }
+                        
+    .empresas p {
+        font-size: 0.1em;
+    }
+
+    .empresas button {
+        display: flex;
+        position: relative;
+        background-color: transparent;
+        color: #eed12f;
+        border: none;
+        font-size: 0.1em;
+        text-align: center;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+/* Caja trabajos */           
+    .container-trabajos{
+        width: 134px;
+        right: 1%;
+    }
+                        
+    .container-trabajos .caja-trabajos{
+        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
+        gap: 8px;
+    }
+        
+    .container-trabajos h2 {
+        font-size: small;
+    }
+
+    .container-trabajos rol {
+        font-size: xx-small;
+    }
+
+    .caja-trabajos h2 {
+        font-size: xx-small;
+    }
+                        
+    .caja-trabajos .trabajos a {
+        font-size: 0.1em;
+    }
+        
+    .trabajos h3 {
+        font-size: xx-small;
+    }
+                        
+    .trabajos p {
+        font-size: 0.1em;
+    }
+
+    footer {
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+/* Caja barras */
+    .barras-contenido {
+        left: -35%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+/* Caja perfil */
+    .caja-perfil {
+        position: absolute;
+        width: 20%;
+        left: 2%;
+    } 
+    .perfil {
+        margin: 1px 0px;
+    }
+/* Caja trabajos */
+    .container-trabajos{
+        right: -1.5%;
+    }
+/* Caja empresas */
+    .container-empresas{
+        right: -1.5%;
+    }
+/* Caja navegacion */
+    nav ul li a {
+        padding: 14px 7px;
+    }
+    nav ul ti a {
+        padding: 14px 10px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+/* Caja perfil */
+    .caja-perfil {
+         width: 18%;
+        left: 1%;
+    }
+/* Caja trabajos */
+    .container-trabajos{
+        right: -1.5%;
+    }
+/* Caja empresas */
+    .container-empresas{
+        right: -1.5%;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+/* Caja trabajos */
+    .container-trabajos{
+        width: 39.5%;
+    }
+    h1 {
+        font-size: large;
+        left: -5px;
+    }
+}
+
+mini {
+    font-size: x-small;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 2px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: -20px;
+    width: 100%;
+    clear: both;
+}

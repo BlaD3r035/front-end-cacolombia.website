@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e9f2f9; /* Color azul muy claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    background-color: #003366; /* Color azul oscuro */
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ffcc00; /* Color amarillo al pasar el ratón */
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box, .forgot-password-panel, .register-box {
+    background-color: #ffffff; /* Blanco */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+    display: block;
+}
+
+.forgot-password-panel, .register-box {
+    display: none;
+}
+
+h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #003366; /* Azul oscuro */
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: #f2f6fc;
+    border: 2px solid #cddbec; /* Azul pálido */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #004c99; /* Azul más fuerte */
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: #666;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -10px;
+    font-size: 12px;
+    color: #004c99;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #003366;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #004c99;
+}
+
+.forgot-password, .back-to-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-password a, .back-to-login a {
+    color: #004c99;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.forgot-password a:hover, .back-to-login a:hover {
+    text-decoration: underline;
+}

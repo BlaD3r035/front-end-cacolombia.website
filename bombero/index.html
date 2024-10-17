@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Bomberos - Santiago de Cali</title>
+    <head>
+        <title>Mi Página Web</title>
+        <link rel="icon" href="imagenes/bomberos-voluntarios-santiago-de-cali-4.png" type="image/png">
+    </head>
+
+    <style>
+        html, body {
+           height: 100%;
+           margin: 0;
+           padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #b71c1c;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .principal {
+            position: relative;
+            height: 350px; 
+            overflow: hidden;
+        }
+
+        .principal img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out; 
+        }
+
+        .principal img.activo {
+            opacity: 1;
+        }
+
+        .principal h2 {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .seccion {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .servicios {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .servicios div {
+            text-align: center;
+            width: 30%;
+        }
+        .servicios h3 {
+            color: #d32f2f;
+        }
+        .galeria {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .galeria img {
+            width: 30%;
+            margin: 10px;
+        }
+        .formulario-contacto {
+            background-color: white;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .formulario-contacto input, .formulario-contacto textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        footer {
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%; 
+            margin-top: auto; 
+        }
+
+        .cobertura {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: white;
+        }
+
+        .cobertura img {
+            max-width: 150px;
+        }
+
+        .cobertura h2 {
+            font-size: 1.8rem;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .cobertura p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .cobertura .boton {
+            background-color: #d32f2f;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .elementos-circulares {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .elemento-circular {
+            text-align: center;
+            width: 150px;
+        }
+
+        .elemento-circular img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .elemento-circular p {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .elemento-circular p:before {
+            content: "» ";
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Departamento de Bomberos de Santiago de Cali</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Galeria.html">Galería</a>
+        <a href="ubicaciones.html">Infraestructura</a>
+        <a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723">Contacto</a>
+    </nav>
+</header>
+
+<div class="principal">
+    <img src="imagenes/bomberos1.png" class="activo" alt="Bomberos 1">
+    <img src="imagenes/bomberos2.png" alt="Bomberos 2">
+    <img src="imagenes/bomberos3.png" alt="Bomberos 3">
+    <h2></h2>
+</div>
+
+<section class="cobertura">
+    <img src="imagenes/gps.webp" alt="Ver cobertura">
+    <h2>Ver cobertura</h2>
+    <p>Estaciones de Bomberos en Cali.</p>
+    <a href="ubicaciones.html" class="boton">Consultar</a>
+</section>
+
+<section class="elementos-circulares">
+    <div class="elemento-circular">
+        <img src="imagenes/wasdwasdwasdwa.png" alt="Academia Nacional de Bomberos">
+        <p>Academia Nacional de Bomberos de Colombia.</p>
+    </div>
+    <div class="elemento-circular">
+        <img src="imagenes/equipo.png" alt="Equipos de seguridad">
+        <p>Equipos de seguridad.</p>
+    </div>
+    <div class="elemento-circular">
+        <img src="imagenes/personal.png" alt="Solicitud de Inspecciones técnicas">
+        <p>Personal</p>
+    </div>
+    <div class="elemento-circular">
+        <img src="imagenes/hospi.png" alt="Atención Prehospitalaria">
+        <p>Atención Prehospitalaria.</p>
+    </div>
+    <div class="elemento-circular">
+        <img src="imagenes/voluntariado.png" alt="Voluntariado">
+        <p>Voluntariado.</p>
+    </div>
+    <div class="elemento-circular">
+        <img src="imagenes/oficina.png" alt="Infraestructura de alta tecnología">
+        <p>Infraestructura de alta tecnología.</p>
+    </div>
+
+<footer>
+    <p>&copy; 2024 Departamento de Bomberos de Santiago de Cali</p>
+</footer>
+
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.principal img');
+    const totalImages = images.length;
+
+    function changeImage() {
+      
+        images[currentIndex].classList.remove('activo');
+
+        
+        currentIndex = (currentIndex + 1) % totalImages;
+
+       
+        images[currentIndex].classList.add('activo');
+    }
+
+    
+    setInterval(changeImage, 4000);
+</script>
+
+</body>
+</html>

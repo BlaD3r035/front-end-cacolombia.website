@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicar para el CTI - Fiscalía General de la Nación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-y: auto;
+        }
+        .modal {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            margin: 20px auto;
+            box-sizing: border-box;
+            position: relative;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        .modal.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .modal.hide {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #0066cc;
+            margin-top: 20px;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: block;
+            background-color: #0066cc;
+            color: white;
+            padding: 10px;
+            margin: 20px auto 0;
+            text-align: center;
+            width: 80%;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #005bb5;
+        }
+        .hidden {
+            display: none;
+        }
+        .custom-image {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 10px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.3em;
+            }
+            h2 {
+                font-size: 1.1em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .btn {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="modal" id="modal-1">
+    <h1>BIENVENIDO AL SERVICIO DE APLICACIONES A AGENTES DEL CTI</h1>
+    <h2>Recomendaciones para usar este sistema</h2>
+    <p>1. Suministre toda la información solicitada.</p>
+    <p>2. Las preguntas resaltadas con asterisco (*) son OBLIGATORIAS.</p>
+    <p>3. Evite utilizar este formulario de manera incorrecta. Cualquier intento de broma o sarcasmo resultará en la anulación de la denuncia.</p>
+    <p>4. Tenga en cuenta que cualquier información registrada y no enviada no será guardada.</p>
+    <p>5. Este formulario solamente sera aceptado en caso de que sera perfecto.</p>
+    <p>6. Las respuestas son revisadas de manera manual, cualquier demora es totalmente justificada.</p>
+    <h2>¿Qué sucede al finalizar la información?</h2>
+    <p>Los resultados son revisados manualmente, uno por uno, para identificar a los candidatos que cumplen con los requisitos para el puesto. Este formulario está dirigido únicamente a aquellos que se destaquen, similar a un proceso de selección de becas.</p>
+    <h2>Términos y Condiciones</h2>
+    <p>El formulario está diseñado para recopilar información relevante sobre los candidatos interesados en el puesto. Solo aquellos que demuestren destacarse en sus habilidades y experiencia serán considerados para avanzar en el proceso de selección.</p>
+    <p>La información proporcionada será tratada conforme a la Ley 1581 de 2012, relativa a la protección de datos personales.</p>
+    <p>Cada solicitud será revisada manualmente por nuestro equipo de recursos humanos. La revisión se realiza de manera individual y detallada para identificar a los candidatos que cumplen con los requisitos del puesto.</p>
+    <p>La selección de candidatos se basa en un conjunto de criterios preestablecidos. Solo aquellos candidatos que se destaquen por sus calificaciones y experiencia serán considerados aptos para continuar en el proceso de selección. La decisión final se tomará a discreción del equipo de selección, y no se aceptarán apelaciones o revisiones adicionales.</p>
+    <p>El envío del formulario y la participación en el proceso de selección no garantizan una oferta de empleo. La selección final depende de una evaluación exhaustiva y comparativa de todos los candidatos.</p>
+    <p>Al enviar su solicitud a través del formulario, usted reconoce que ha leído, comprendido y aceptado estos términos y condiciones en su totalidad.</p>
+    <p>Consulte los DERECHOS Y OBLIGACIONES DEL CIUDADANO.</p>
+    <p>Al hacer clic en "ACEPTAR TÉRMINOS Y CONDICIONES", usted confirma que ha leído, comprendido y aceptado la información aquí proporcionada.</p>
+    <button class="btn" onclick="nextModal()">Aceptar términos y condiciones</button>
+</div>
+
+<div class="modal hidden" id="modal-2">
+    <img src="../imagenes/logo.svg" alt="Logo de la Fiscalía" class="custom-image">
+    <h2>DENUNCIA VIRTUAL</h2>
+    <h1>FISCALÍA GENERAL DE LA NACIÓN</h1>
+    <p>Para presentar una denuncia: Haga clic en el botón "Ingrese aquí para crear su denuncia o reportar una persona desaparecida".</p>
+    <button class="btn" onclick="window.location.href='aplicar2.html';">Ingrese aquí para aplicar al CTI. </button>
+
+
+</div>
+
+<script>
+    function nextModal() {
+        // Animación para que el primer modal salga de la pantalla hacia abajo
+        const modal1 = document.getElementById('modal-1');
+        modal1.classList.add('hide');
+
+        // Espera a que termine la animación antes de mostrar el siguiente modal
+        setTimeout(() => {
+            modal1.classList.add('hidden');
+            const modal2 = document.getElementById('modal-2');
+            modal2.classList.remove('hidden');
+            setTimeout(() => {
+                modal2.classList.add('show');
+            }, 50); // Pequeño retraso para que la animación se active
+        }, 500); // Debe coincidir con el tiempo de transición del CSS
+    }
+
+    // Mostrar el primer modal con una animación al cargar la página
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal1 = document.getElementById('modal-1');
+        setTimeout(() => {
+            modal1.classList.add('show');
+        }, 50); // Pequeño retraso para que la animación se active
+    });
+</script>
+
+</body>
+</html>

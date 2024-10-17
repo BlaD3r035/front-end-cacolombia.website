@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta en línea</title>
+    <link rel="stylesheet" href="resultstyles.css">
+</head>
+<body>
+    <header>
+        <img src="logo_pol.png" alt="Logo Policía Nacional de Colombia">
+        <h1>POLICÍA NACIONAL DE COLOMBIA</h1>
+    </header>
+    
+    <section class="consulta-container">
+        <h2>Consulta en línea de Antecedentes Penales y Requerimientos Judiciales</h2>
+        <p>El ciudadano:</p>
+        <strong id="nombre"></strong><br>
+        Identificado con el número de documento:<br>
+        <strong id="documentId"></strong><br>
+        <table id="antecedentesTable" style="display:none; border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr>
+                    <th>Artículo</th>
+                    <th>Tiempo (meses)</th>
+                    <th>fecha dado en libertad </th>
+                </tr>
+            </thead>
+            <tbody id="antecedentesBody"></tbody>
+        </table>
+        <p id="noAntecedentes" style="display:none;"></p>
+    </section>
+
+    <button id="salir" onclick="salir()">Salir</button>
+
+    <footer>
+        <p>Este sitio web es un proyecto de ficción y parodia inspirado en actividades de roleplay.<br>
+            No está afiliado, patrocinado ni respaldado por la Policía Nacional de Colombia ni por alguna entidad pública o privada.<br>
+            Todos los nombres, logotipos y referencias son utilizados con fines creativos.<br>
+            Página exclusiva de 「CA」 Colombia ER:LC
+        </p>
+    </footer>
+
+   
+
+    <script>
+    const data = JSON.parse(localStorage.getItem('consultaData'));
+
+if (data) {
+    console.log(data);
+    document.getElementById('nombre').textContent = `${data.nombre} ${data.apellido}`;
+    document.getElementById('documentId').textContent = `${data.documentId}`;
+
+    if (data.antecedentes && data.antecedentes.length > 0) {
+        const table = document.getElementById('antecedentesTable');
+        const tbody = document.getElementById('antecedentesBody');
+        
+      
+        table.style.display = 'table';
+        
+   
+        tbody.innerHTML = '';
+
+        
+        data.antecedentes.forEach(antecedente => {
+            const row = document.createElement('tr');
+            
+            const articuloCell = document.createElement('td');
+            articuloCell.textContent = antecedente.articulos;
+            row.appendChild(articuloCell);
+            
+            const tiempoCell = document.createElement('td');
+            tiempoCell.textContent = antecedente.tiempo;
+            row.appendChild(tiempoCell);
+
+            const timelibertad = document.createElement('td');
+            timelibertad.textContent = antecedente.endTime;
+            row.appendChild(timelibertad);
+            
+            tbody.appendChild(row);
+        });
+    } else {
+        document.getElementById('noAntecedentes').textContent = 'NO TIENE ASUNTOS PENDIENTES CON LAS AUTORIDADES JUDICIALES. En cumplimiento de la Sentencia SU-458 del 21 de junio de 2012, proferida por la Honorable Corte Constitucional, la leyenda “NO TIENE ASUNTOS PENDIENTES CON LAS AUTORIDADES JUDICIALES” aplica para todas aquellas personas que no registran antecedentes y para quienes la autoridad judicial competente haya decretado la extinción de la condena o la prescripción de la pena.';
+        document.getElementById('noAntecedentes').style.display = 'block';
+    }
+} else {
+    document.getElementById('noAntecedentes').textContent = 'No se encontraron resultados.';
+    document.getElementById('noAntecedentes').style.display = 'block';
+}
+
+function salir() {
+    localStorage.removeItem('consultaData'); 
+    window.location.href = 'index.html'; 
+}
+
+    </script>
+</body>
+</html>

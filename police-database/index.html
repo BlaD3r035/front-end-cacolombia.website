@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ca colombia Base de datos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./calogo.png">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Base De Datos Cali</h2>
+            <div>
+                <input type="text" id="placaInput" placeholder="placa">
+                <button onclick="buscarplaca()">Buscar</button>
+                <input type="text" id="nombreInput" placeholder="numero de documento">
+                <button onclick="buscar()">Buscar</button>
+            </div>
+            <button id="theme-toggle" onclick="toggleTheme()">Cambiar Tema</button>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <img id="avatar" src="" alt="Avatar">
+                <p><strong>Documento:</strong> <span id="tipodoc"></span></p>
+                <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+                <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+                <p><strong>Nacionalidad:</strong> <span id="nacionalidad"></span></p>
+                <p><strong>Estatura:</strong> <span id="estatura"></span> cm</p>
+                <p><strong>Sexo:</strong> <span id="sexo"></span></p>
+                <p><strong>Fecha de Nacimiento:</strong> <span id="fechanacimiento"></span></p>
+                <p><strong>Edad:</strong> <span id="edad"></span></p>
+                <p><strong>G.S:</strong> <span id="gs"></span></p>
+                <p><strong>Username:</strong> <span id="username"></span></p>
+                <p><strong>Numero de documento:</strong> <span id="ndoc"></span></p>
+                <p><span id="byc"></span></p>
+            </div>
+            
+            <div class="main-content">
+                <div class="section">
+                    <h3>LICENCIA</h3>
+                    <table>
+                        <tr>
+                            <th>LICENCIA DE CONDUCIR</th>
+                            <th>Categoria</th>
+                            <th>Fecha de expedición</th>
+                            <th>Restricciones</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="section">
+                    <h3>ANTECEDENTES</h3>
+                    <table>
+                        <tr>
+                            <th>Antecedentes</th>
+                            <th>Tiempo</th>
+                            <th>Agente</th>
+                           
+                        </tr>
+                       
+                    </table>
+                </div>
+              
+                <div class="section">
+                    <h3>MULTAS</h3>
+                    <table>
+                        <tr>
+                            <th>Artículos</th>
+                            <th>Placa</th>
+                            <th>Valor</th>
+                            <th>Agente</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="section">
+                    <h3>VEHÍCULOS</h3>
+                    <table>
+                        <tr>
+                            <th>Matrícula</th>
+                            <th>Tipo</th>
+                            <th>Color</th>
+                        </tr>
+                       
+                    </table>
+                </div>
+                <div class="section">
+                    <h3>OBSERVACIONES</h3>
+                    <table>
+                        <tr>
+                            <th></th>
+                            
+                        </tr>
+                       
+                    </table>
+                <div>
+                    <h3>REGISTRAR MULTA</h3>
+                    <button id="multarbtn" onclick="openmultamenu()">registra una multa </button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="multarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarMulta()">&times;</span>
+            <h3>Añadir Multa</h3>
+            <label for="tipo">Seleccione el tipo:</label>
+            <select id="tipomulta" name="tipo">
+                <option value="multa">Multa</option>
+                <option value="comparendo">Comparendo</option>
+            </select>
+            <p id="namemultaopp"><strong>numero de documento de la persona multada</strong></p>
+            <input type="text" id="campo2" >
+            <p>articulos</p>
+            <input type="text" id="campo3" >
+            <p>placa del vehiculo (si es comparendo colocar N/A)</p>
+            <input type="text" id="campo4" >
+            <p>valor de la multa</p>
+            <input type="text" id="campo5" >
+            <p id="textmultarep"></p>
+            <button onclick="enviarMulta()">Enviar</button>
+        </div>
+    </div>
+    <div id="logModal" class="modal1">
+        <div class="modal-content">
+            <h3>login</h3>
+
+            <div id="logModal" class="modal1">
+                <div class="modal-content">
+                    <h3>login</h3>
+                   
+                    <p id="numberlogdoc"><strong>numero de documento del agente</strong></p>
+                    <input type="text" id="campo1log">
+                    <p>clave</p>
+                    <input type="text" id="campo2log">
+                    <p><br>
+                    al iniciar sesión en la base de datos aceptas el tratamiento de datos, el uso indebido de la base de datos es causa de delito </p>
+                    <button onclick="log()">login</button>
+                </div>
+            </div>
+           
+    </div>
+</body>
+
+</html>

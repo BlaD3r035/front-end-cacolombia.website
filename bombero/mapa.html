@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicacion de los departamentos. - Departamento de Bomberos de Santiago de Cali</title>
+    <head>
+        <title>Mi Página Web</title>
+        <link rel="icon" href="imagenes/bomberos-voluntarios-santiago-de-cali-4.png" type="image/png">
+    </head>
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            overflow: hidden;
+        }
+
+
+        .zoom-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #1e1e1e;
+            cursor: grab;
+        }
+
+        
+        .zoom-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="zoom-container">
+        <img src="imagenes/mapa.png" alt="Mapa con Zoom" class="zoom-image" id="mapImage">
+    </div>
+
+    <script>
+        const mapImage = document.getElementById('mapImage');
+        let scale = 1;
+        const scaleStep = 0.1;
+        let isDragging = false;
+        let startX, startY, currentX = 0, currentY = 0, initialX, initialY;
+
+       
+        mapImage.addEventListener('wheel', function (event) {
+            event.preventDefault();
+            if (event.deltaY < 0) {
+                scale += scaleStep; 
+            } else {
+                scale = Math.max(1, scale - scaleStep); 
+            }
+            mapImage.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
+        });
+
+       
+        const container = document.querySelector('.zoom-container');
+
+        container.addEventListener('mousedown', function (event) {
+            event.preventDefault();
+            isDragging = true;
+            container.style.cursor = 'grabbing'; 
+            startX = event.clientX;
+            startY = event.clientY;
+            initialX = currentX;
+            initialY = currentY;
+        });
+
+        container.addEventListener('mousemove', function (event) {
+            if (isDragging) {
+                const dx = event.clientX - startX;
+                const dy = event.clientY - startY;
+                currentX = initialX + dx;
+                currentY = initialY + dy;
+                mapImage.style.transform = `scale(${scale}) translate(${currentX}px, ${currentY}px)`;
+            }
+        });
+
+        container.addEventListener('mouseup', function () {
+            isDragging = false;
+            container.style.cursor = 'grab';
+        });
+
+        container.addEventListener('mouseleave', function () {
+            isDragging = false; 
+            container.style.cursor = 'grab';
+        });
+
+    </script>
+
+</body>
+</html>

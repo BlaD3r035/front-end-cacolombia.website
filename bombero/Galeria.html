@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Bomberos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="barra-nav">
+        <div class="contenedor">
+            <h1>Departamento de Bomberos de Santiago de Cali</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Galeria.html">Galería</a></li>
+                    <li><a href="ubicaciones.html">Infraestructura</a></li>
+                    <li><a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="imagen-principal">
+        <div class="texto-encabezado">
+            <h2>Galería</h2>
+        </div>
+        <img src="imagenes/yolya.png" alt="Imagen de bomberos">
+    </section>
+  
+    <section class="galeria">
+        <h2>Galería de Imágenes</h2>
+        <div id="contenedor-galeria" class="contenedor-galeria">
+         
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://dbcacolombia.discloud.app/imagenesbomberos')
+            .then(response => response.json())
+            .then(imagenes => {
+                const contenedorGaleria = document.getElementById('contenedor-galeria');
+                imagenes.forEach(imagen => {
+                    const itemGaleria = document.createElement('div');
+                    itemGaleria.classList.add('item-galeria');
+    
+                   
+                    const linkElement = document.createElement('a');
+                    linkElement.href = `imagenes/galery/${imagen}`;
+                    linkElement.target = "_blank"; 
+    
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `imagenes/galery/${imagen}`;
+                    imgElement.alt = imagen;
+                    imgElement.id = "galeryimages";
+    
+                    const descripcion = document.createElement('div');
+                    descripcion.classList.add('descripcion');
+                    descripcion.innerHTML = `<p>${imagen}</p>`;
+    
+                   
+                    linkElement.appendChild(imgElement);
+    
+                   
+                    itemGaleria.appendChild(linkElement);
+                    itemGaleria.appendChild(descripcion);
+    
+                    contenedorGaleria.appendChild(itemGaleria);
+                });
+            })
+            .catch(error => console.error('Error cargando las imágenes:', error));
+        });
+    </script>
+
+
+<style>
+body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0efef;
+}
+
+.barra-nav {
+    background-color: #aa0505; 
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
+.barra-nav .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.barra-nav h1 {
+    font-size: 24px;
+}
+
+.barra-nav nav ul {
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+}
+
+.barra-nav nav ul li {
+    margin-left: 20px;
+}
+
+.barra-nav nav ul li a {
+    text-decoration: none;
+    color: #f0efef;
+    font-size: 16px;
+}
+
+.imagen-principal {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.imagen-principal img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+
+.texto-encabezado {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgb(250, 247, 247);
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.galeria {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.contenedor-galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.item-galeria {
+    position: relative;
+    width: 500px;
+    overflow: hidden;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.descripcion {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.item-galeria:hover .descripcion {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .barra-nav .contenedor {
+        flex-direction: column; /* Cambia a columna */
+        text-align: center;
+    }
+    
+    .barra-nav h1 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+        margin-bottom: 10px; /* Agrega espacio entre el título y el menú */
+    }
+    
+    .barra-nav nav ul {
+        flex-direction: column; /* Elementos del menú uno debajo de otro */
+        padding: 0;
+    }
+
+    .barra-nav nav ul li {
+        margin: 10px 0; /* Más espacio entre elementos del menú */
+    }
+
+    .barra-nav nav ul li a {
+        font-size: 14px; /* Tamaño de fuente más pequeño para enlaces */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (por debajo de 480px) */
+@media (max-width: 480px) {
+    .barra-nav h1 {
+        font-size: 18px;
+    }
+
+    .barra-nav nav ul li a {
+        font-size: 12px; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    .barra-nav {
+        padding: 8px 0; /* Reduce el padding en pantallas muy pequeñas */
+    }
+}
+
+
+</style>
+
+</body>
+</html>

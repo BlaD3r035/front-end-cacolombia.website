@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas del Desarrollador</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f0f0f0, #d9e6f2);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        p {
+            text-align: center;
+            color: #34495e;
+            font-size: 16px;
+            margin: 0 20px;
+            line-height: 1.6;
+        }
+
+        #desarrolladores {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .desarrollador {
+            background-color: #fff;
+            border: none;
+            border-radius: 15px;
+            width: 270px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .desarrollador:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .desarrollador img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .desarrollador h2 {
+            font-size: 20px;
+            color: #2980b9;
+            font-weight: 700;
+        }
+
+        .desarrollador p {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .desarrollador strong {
+            color: #2980b9;
+        }
+        button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #1e6091;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+    </style>
+</head>
+<body>
+    <h1>Grupo de Desarrollo de CA Colombia</h1>
+    <br>
+    <p>Hola, somos el grupo de desarrollo de ca Colombia, todo el trabajo realizado por nosotros fue hecho con cariño a esta comunidad y en apoyo al proyecto, ya que la mayoría del trabajo fue sin ánimo de lucro, esperamos que como comunidad puedan apreciar todo esto.</p>
+    <br>
+    <h1>Desarrolladores</h1>
+    <div id="desarrolladores">
+        <div class="desarrollador">
+            <img src="./image/f4772fe6c1b61abde8eddea64298157e.jpg" alt="Foto de desarrollador">
+            <h2>Samuel E.</h2>
+            <p>Discord Bot Dev, full stack, desarrollador de la página de la Policía Nacional, base de datos Minijusticia <br><strong>Discord:</strong> blad3r035</p>
+        </div>
+
+        <div class="desarrollador">
+            <img src="./image/remix-08012e5f-d017-4c6a-8105-a3dd9bf7fc53.png" alt="Foto de desarrollador">
+            <h2>FederalTactical</h2>
+            <p>Seguridad informatica, Roblox Dev, desarrollador página Minijusticia <br><strong>Discord:</strong> unbreakingcon</p>
+        </div>
+
+        <div class="desarrollador">
+            <img src="./image/hwater foto.png" alt="Foto de desarrollador">
+            <h2>HWATERRRRRR</h2>
+            <p>Desarrollador front-end, Roblox livery designer, desarrollador página Fiscalía, desarrollador pagina bomberos. Discord server support <br> <strong>Discord:</strong> watersanz</p>
+        </div>
+
+        <div class="desarrollador">
+            <img src="./image/logocacolombia.png" alt="Foto de desarrollador">
+            <h2>LeYuiKa</h2>
+            <p>Desarrolladora full stack, desarrolladora de la página principal CA Colombia, Discord server support <br><strong>Discord:</strong> leyui</p>
+        </div>
+
+
+    </div>
+    <button onclick="window.location.href = 'index.html'">regresar</button>
+
+
+</body>
+</html>

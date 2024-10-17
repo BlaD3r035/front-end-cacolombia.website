@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Bomberos</title>
+    <head>
+        <title>Mi Página Web</title>
+        <link rel="icon" href="imagenes/bomberos-voluntarios-santiago-de-cali-4.png" type="image/png">
+    </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header {
+            background-color: #c70000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #a60000;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 15px;
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #870000;
+        }
+
+
+        .infraestructura {
+            text-align: center;
+            padding: 40px;
+            background-color: #f4f4f4;
+        }
+
+        .infraestructura h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .estaciones {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .estacion {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .estacion img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .estacion h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .estacion p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            background-color: #c70000;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #a60000;
+        }
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1>Departamento de Bomberos de Santiago de Cali</h1>
+    </header>
+
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Galeria.html">Galería</a>
+        <a href="ubicaciones.html">Infraestructura</a>
+        <a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723">Contacto</a>
+    </nav>
+
+   
+    <div class="infraestructura">
+        <h2>Infraestructura</h2>
+        <div class="estaciones">
+            <div class="estacion">
+                <img src="imagenes/estacion1.png" alt="Estación X1">
+                <h3>ESTACIÓN X1</h3>
+                <p><strong>Nombre:</strong> CT. Francisco Uribe</p>
+                <p><strong>Dirección:</strong> Sandstone Road - Hillview Rd Postal 210 </p>
+                <p><strong>Teléfono:</strong> 119</p>
+                <a href="mapa.html" class="btn">Ver en Google Maps</a>
+            </div>
+
+            <div class="estacion">
+                <img src="imagenes/estacion2.png" alt="Estación X2">
+                <h3>ESTACIÓN X2</h3>
+                <p><strong>Nombre:</strong> CT. Jaime Castro Córdoba</p>
+                <p><strong>Dirección:</strong> Maple Street - Oak Valley Dr. - Postal 1107</p>
+                <p><strong>Teléfono:</strong> 119</p>
+                <a href="mapa.html" class="btn">Ver en Google Maps</a>
+            </div>
+
+          
+    </div>
+
+</body>
+</html>

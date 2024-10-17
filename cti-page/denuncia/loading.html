@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Carga</title>
+    <link rel="stylesheet" href="loading-style.css">
+</head>
+<body>
+    <div class="loading-container">
+        <div class="overlay">
+            <img src="../imagenes/logo23.png" alt="Logo" class="logo-overlay">
+            <div class="content">
+                <h2>Cargando tu denuncia...</h2>
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.location.href = 'denuncia.html'; // Redirige a la página denuncia.html después de 3 segundos
+            }, 3000); // Espera 3 segundos antes de la redirección
+        });
+    </script>
+</body>
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.loading-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('imagenes/fghfghf');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.459); /* Fondo semi-transparente */
+}
+
+.logo-overlay {
+    position: absolute;
+    width: 300px; /* Tamaño del logo */
+    height: auto;
+    opacity: 0.3; /* Transparencia del logo */
+    z-index: 1; /* Asegura que esté detrás del texto */
+}
+
+.content {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2; /* Asegura que el contenido esté por encima del logo */
+}
+
+.content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Esto asegura que se mantenga dentro del flujo flex */
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #ffffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+</style>
+</html>
