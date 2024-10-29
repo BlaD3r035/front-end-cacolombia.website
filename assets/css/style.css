@@ -53,7 +53,7 @@ h1 {
     display: none;
     position: absolute;
     top: 87%;
-    width: 110%;
+    width: 120%;
     left: -70%; 
     padding: 10px;
     background-color: #444; 
@@ -352,7 +352,7 @@ nav {
     }
     .evento img {
         max-width: 100%;
-        height: auto; 
+        height: 160px; 
         border-radius: 10px; 
         margin-bottom: 10px; 
         object-fit: cover; 
@@ -360,7 +360,6 @@ nav {
 /* Caja empresas */
     .container-empresas{
         position: relative;
-        gap: 3%;
         width: 40%;
         background-color: rgba(50, 50, 50); 
         padding: 20px; 
@@ -370,6 +369,7 @@ nav {
         right: 8%;
         color: #fff;
         z-index: 1;
+        height: auto;
     }
                 
     .container-empresas .heading{
@@ -377,13 +377,12 @@ nav {
         text-align: center;
         position: relative;
         margin-right: auto;
-        padding: 0px 10px 10px;
+        padding: 0px 0px 5px;    
     }
                 
     .container-empresas .caja-empresas{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        display: flex;
+        height: auto;
     }
                 
     .container-empresas .caja-empresas .empresas{
@@ -392,7 +391,11 @@ nav {
         border-radius: 5px;
         background-color: rgba(88, 88, 88, 0.8);
         text-align: center;
-        padding: 5px 10px;
+        padding: 5px 8px;
+        width: 100px;
+        height: 1%; 
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
                 
     .container-empresas .caja-empresas .empresas:hover {
@@ -401,11 +404,11 @@ nav {
     }
     .container-empresas .caja-empresas .empresas img {
         max-width: 100%; 
-        height: auto; 
+        height: 140px; 
         border-radius: 10px; 
-        margin-bottom: 10px;
-        margin-top: 10px; 
-        object-fit: cover; 
+        object-fit: contain;
+        margin-bottom: 7px;
+        margin-top: 1px;
     }
 
     .container-empresas h2 {
@@ -421,7 +424,7 @@ nav {
                 
     .caja-empresas .empresas a {
         display: inline-block;
-        margin-top: 10px; 
+        margin-top: 5px; 
         color: #eed12f;
     }
 
@@ -450,30 +453,62 @@ nav {
 /* Caja trabajos */
     .container-trabajos{
         position: relative;
-        gap: 3%;
         width: 40%;
+        height: auto;
         background-color: rgba(50, 50, 50);
-        padding: 20px;
+        padding: 25px;
         border-radius: 8px;
         float: right;
         top: 50%;
         right: 8%;
         color: #fff;
         z-index: 2;
+        text-align: center;
     }
-    
+
+    .slider-wrapper {
+        width: 100%;
+        margin: 0 15px 5px;
+    }
+
+    .swiper-slide {
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+    }
+
+    .swipera {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+    }
+
     .container-trabajos .heading{
         color: #fff;
         text-align: center;
         position: relative;
         margin-right: auto;
-        padding: 0px 10px 10px;
+        padding: 0px 0px 5px;
     }
-                
+
+    .swiper-pagination-bullet-active {
+        background-color: #ffffff !important;
+   }
+
+   .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0; 
+    width: 100%;
+    text-align: center;
+    }
+
     .container-trabajos .caja-trabajos{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
+        display: flex;
+        height: auto;
     }
                 
     .container-trabajos .caja-trabajos .trabajos{
@@ -482,7 +517,11 @@ nav {
         border-radius: 5px;
         background-color: rgba(88, 88, 88, 0.8);
         text-align: center;
-        padding: 5px 10px;
+        padding: 5px 8px;
+        width: 100px;
+        height: 280px; 
+        margin-top: 10px;
+        margin-bottom: 15px;
     }
                 
     .container-trabajos .caja-trabajos .trabajos:hover {
@@ -490,16 +529,16 @@ nav {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
     .container-trabajos .caja-trabajos .trabajos img {
-        max-width: 100%;
-        height: auto; 
+        max-width: 100%; 
+        height: 64%; 
         border-radius: 10px; 
-        margin-bottom: 10px;
-        margin-top: 10px;
-        object-fit: cover;
+        object-fit: contain;
+        margin-bottom: 7px;
+        margin-top: 1px;
     }
 
     .container-trabajos h2 {
-        margin: 10px;
+        margin: 0px;
     }
     .caja-trabajos h2 {
         margin: 0;
@@ -511,8 +550,8 @@ nav {
                 
     .caja-trabajos .trabajos a {
         display: inline-block; 
-        margin-top: 10px; 
         color: #eed12f;
+        margin-bottom: 5px;
     }
 
     .trabajos h3 {
@@ -664,6 +703,10 @@ nav {
         font-size: x-small;
     }
 
+    .evento img {
+        height: auto; 
+    }
+
 /* banner */
     .caja-banner a {
         height: auto;
@@ -752,10 +795,16 @@ nav {
         width: 134px;
         right: 2%;
     }
-                        
-    .container-empresas .caja-empresas{
-        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-        gap: 8px;
+  
+    .p2{
+        display:none;
+    }
+
+    .container-empresas .caja-empresas .empresas img {
+        max-width: 100%; 
+        height: 50px; 
+        object-fit: scale-down;
+        margin-bottom: 0;
     }
         
     .container-empresas h2 {
@@ -797,13 +846,18 @@ nav {
     }
 /* Caja trabajos */           
     .container-trabajos{
-        width: 134px;
+        width: 32%;
         right: 1%;
     }
-                        
-    .container-trabajos .caja-trabajos{
-        grid-template-columns: repeat(auto-fit, minmax(48px, 1fr));
-        gap: 8px;
+                  
+    .container-trabajos .caja-trabajos .trabajos{
+        height: 130px; 
+    }
+  
+    .container-trabajos .caja-trabajos .trabajos img {
+        max-width: 100%; 
+        height: auto; 
+        object-fit: scale-down;
     }
         
     .container-trabajos h2 {
@@ -835,10 +889,23 @@ nav {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 431px) {
 /* Caja barras */
     .barras-contenido {
         left: -35%;
+    }
+/* Caja trabajos */
+    .container-trabajos{
+        right: 2%;
+        width: 31.9%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    /* Caja trabajos */
+    .container-trabajos{
+        right: -1.5%;
+        width: 130px;
     }
 }
 
@@ -855,10 +922,11 @@ nav {
 /* Caja trabajos */
     .container-trabajos{
         right: -1.5%;
+        width: 37%;
     }
 /* Caja empresas */
     .container-empresas{
-        right: -1.5%;
+        right: -1%;
     }
 /* Caja navegacion */
     nav ul li a {
@@ -869,26 +937,37 @@ nav {
     }
 }
 
+@media only screen and (max-width: 391px) {
+/* Caja trabajos */
+    .container-trabajos{
+        right: -1.8%;
+        width: 36%;
+    }
+}
+
 @media only screen and (max-width: 376px) {
 /* Caja perfil */
     .caja-perfil {
-         width: 18%;
+        width: 18%;
         left: 1%;
     }
 /* Caja trabajos */
     .container-trabajos{
-        right: -1.5%;
+        right: -2%;
+        width: 38%;
     }
+    
 /* Caja empresas */
     .container-empresas{
-        right: -1.5%;
+        right: -2%;
+        width: 40%;
     }
 }
 
 @media only screen and (max-width: 360px) {
 /* Caja trabajos */
     .container-trabajos{
-        width: 39.5%;
+        width: 37%;
     }
     h1 {
         font-size: large;

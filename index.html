@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CA Colombia</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <header>
@@ -56,7 +57,7 @@
             <li><a href="https://www.cacolombia.website/cti-page/" target="_blank">
                 <img src="assets/img/cti.png" alt="CTI"> </a></li>
              <li><a href="./bombero/index.html" target="_blank">
-                <img src="assets/img/logobomberos.webp" alt="bomberos"> </a></li>
+                <img src="assets/img/bombero.png" alt="bomberos"> </a></li>
             <li><a id="toggleButton">
                 <img src="assets/img/trabajo.png" alt="Cambia trabajos"> </a></li>
             <ti><a href="https://www.youtube.com/@cacolombiarp/videos" target="_blank">
@@ -99,13 +100,13 @@
  
 <!-- Empresas -->
     <div id= empresas class="container-empresas hidden">
-        <section>
-            <div class="heading">
-                <h2>EMPRESAS</h2>
-                <mini>Basado en el canal de empresas</mini>
-            </div>
-            <div class="caja-empresas">
-                <div class="empresas">
+        <div class="heading">
+            <h2>EMPRESAS</h2>
+            <mini>Basado en el canal de empresas</mini>
+        </div>
+        <div class="slider-wrapper2 swipera">
+            <div class="caja-empresas swiper-wrapper">
+                <div class="empresas swiper-slide">
                     <h3>Knotrix</h3>
                     <p>Tienda Electronica</p>
                     <img href="" src="assets/img/knx.jpg" alt="">
@@ -113,38 +114,38 @@
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/3MZjJx5YFx" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Juan Valdez</h3>
                     <img href="" src="assets/img/juan.png" alt="">
                     <p class="empresa" data-completo="Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa">Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa</p> <!-- Texto completo -->
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/wCG6duJrrj" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Barba Fina</h3>
                     <img href="" src="assets/img/barba.png" alt="">
                     <a href="https://discord.gg/3zUtCmMqvx" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Andres Carne de Res</h3>
                     <img href="" src="assets/img/qudres.png" alt="">
                     <a href="https://discord.gg/4tqmpEvhNW" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Rappi</h3>
                     <img href="" src="assets/img/rappi.png" alt="">
                     <p class="empresa" data-completo="Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa">Nuestra cafetería cuenta con un equipo de amantes del buen café. Te haremos sentir como en casa</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/fSAWrEeTZj" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Alzxte's Joyas</h3>
                     <img href="" src="assets/img/alz.jpg" alt="">
                     <p class="empresa" data-completo="Es una empresa distribuidora de joyas a todo cali, su nombre es Alzxte's Joyas">Es una empresa distribuidora de joyas a todo cali, su nombre es Alzxte's Joyas</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/H9Q4WuhTUe" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>El Rincon Mexicano</h3>
                     <p>Restaurante Mexicano</p>
                     <img href="" src="assets/img/mexicano.png" alt="">
@@ -152,42 +153,42 @@
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.com/invite/M9MhU936rq" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Mobil</h3>
                     <img href="" src="assets/img/mobil.png" alt="">
                     <p class="empresa" data-completo="En Mobil, nos enorgullece ofrecerte combustibles de la más alta calidad, diseñados para mejorar el rendimiento de tu vehículo y garantizar una conducción más eficiente y segura.">En Mobil, nos enorgullece ofrecerte combustibles de la más alta calidad, diseñados para mejorar el rendimiento de tu vehículo y garantizar una conducción más eficiente y segura.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/cvc352CNF7" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Coalición de Transporte</h3>
                     <img href="" src="assets/img/taxi.png" alt="">
                     <p class="empresa" data-completo="Coalición de Transporte Universal de Cali es una empresa de transporte público de la ciudad de Cali.">Coalición de Transporte Universal de Cali es una empresa de transporte público de la ciudad de Cali.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/kTWHQ7svt2" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3> Wolfshield Defense Co</h3>
                     <img href="" src="assets/img/wolf.png" alt="">
                     <p class="empresa" data-completo="Nos especializamos en ofrecer soluciones avanzadas de seguridad y protección.">Nos especializamos en ofrecer soluciones avanzadas de seguridad y protección.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/npGmadNXrD" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Garcia's Store</h3>
                     <img href="" src="assets/img/garcia.png" alt="">
                     <p class="empresa" data-completo="Es una empresa hecha con fines de vender celulares, drones alguna variedad de sus productos son Samsung, Apple, drones con marca DJI">Es una empresa hecha con fines de vender celulares, drones alguna variedad de sus productos son Samsung, Apple, drones con marca DJI</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/Pu82KjMdCr" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Texaco</h3>
                     <img href="" src="assets/img/texaco.png" alt="">
                     <p class="empresa" data-completo="Es una marca líder en la industria de combustibles, reconocida por su calidad, confiabilidad y más de un siglo de experiencia. ">Es una marca líder en la industria de combustibles, reconocida por su calidad, confiabilidad y más de un siglo de experiencia. </p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/S3A7vpegwC" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>JMC Blindajes</h3>
                     <p>Taller Mecánico de Springfield</p>
                     <img href="" src="assets/img/jmc.png" alt="">
@@ -195,130 +196,131 @@
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/GDnbmhuhJT" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Bancolombia</h3>
                     <img href="" src="assets/img/banco.png" alt="">
                     <p class="empresa" data-completo="es una institución financiera innovadora y comprometida con el bienestar de sus clientes.">es una institución financiera innovadora y comprometida con el bienestar de sus clientes.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/nZq7hKdBCC" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Prosegur</h3>
                     <img href="" src="assets/img/prose.png" alt="">
                     <p class="empresa" data-completo="Es una empresa del sector privado de la seguridad, fundada en 1786 en España. ">Es una empresa del sector privado de la seguridad, fundada en 1786 en España. </p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/yZtvN3rsx6" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Technical S.A.S</h3>
                     <p>Gasolinera</p>
                     <img href="" src="assets/img/terpel.png" alt="">
                     <a href="https://discord.gg/qWFSzYv8j5" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Global Armor Blindaje y Protección</h3>
                     <img href="" src="assets/img/global.png" alt="">
                     <p class="empresa" data-completo="Global Armor Blindaje y Protección, se dedica a ofrecer soluciones integrales de seguridad a través de la fabricación, instalación y mantenimiento de sistemas de blindaje.">Global Armor Blindaje y Protección, se dedica a ofrecer soluciones integrales de seguridad a través de la fabricación, instalación y mantenimiento de sistemas de blindaje.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/qvbbAMdYd3" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Security Breach</h3>
                     <img href="" src="assets/img/security.png" alt="">
                     <p class="empresa" data-completo="Ofrecemos variedad de trabajos también ¿No crees que somos los mejores? Ven y descúbrelo.">Ofrecemos variedad de trabajos también ¿No crees que somos los mejores? Ven y descúbrelo.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.com/invite/E463QDShYM" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Subastas Colombia</h3>
                     <img href="" src="assets/img/subasta.jpg" alt="">
                     <p class="empresa" data-completo="Gana las mejores subastas de bodegas con articulos aleatorios! Hazte socio para tener subastas premium y ganar mejores premios">Gana las mejores subastas de bodegas con articulos aleatorios! Hazte socio para tener subastas premium y ganar mejores premios</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/YGbxqWpjga" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Noticias RCN</h3>
                     <img href="" src="assets/img/noticias.png" alt="">
                     <a href="https://discord.gg/P4V3sdpNce" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Starbucks</h3>
                     <img href="" src="assets/img/starbucks.png" alt="">
                     <p class="empresa" data-completo="Es una empresa de Cafe, Donde vendemos Cafe, Croissant, Donas y muchas mas cosas!">Es una empresa de Cafe, Donde vendemos Cafe, Croissant, Donas y muchas mas cosas!</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/58UKBwWxGZ" target="_blank">Más información</a>
                 </div>
-                <div class="empresas">
+                <div class="empresas swiper-slide">
                     <h3>Triple A</h3>
                     <img href="" src="assets/img/riple.png" alt="">
                     <p class="empresa" data-completo="Triple A es una empresa de Acueducto, Alcantarillado,Aseo S.A, y electricidad.">Triple A es una empresa de Acueducto, Alcantarillado,Aseo S.A, y electricidad.</p>
                     <button onclick="toggleTexto(this)">Leer más</button> <!-- Botón Leer más -->
                     <a href="https://discord.gg/BmrWxPBsqu" target="_blank">Más información</a>
                 </div>
-            </div>    
-        </section>
+            </div> 
+        </div>
+        <div class="swiper-pagination p2"></div>
     </div>
 <!-- Empresa final -->
 
 <!-- Trabajos -->
     <div id="trabajos" class="container-trabajos">
-        <section>
-            <div class="heading">
-                <h2>TRABAJOS</h2>
-                <h2><mini>Basado en el canal de mintrabajos</mini></h2>
-            </div>
-            <div class="caja-trabajos">
-                <div class="trabajos">
-                    <h3>Paramedico / Medico</h3>
+        <div class="heading">
+            <h2>TRABAJOS</h2>
+            <h2><mini>Basado en el canal de mintrabajos</mini></h2>
+        </div>
+        <div class="slider-wrapper swipera">
+            <div class="caja-trabajos swiper-wrapper">
+                <div class="trabajos swiper-slide">
+                    <h3>Paramedico</h3>
                     <p>Hospital</p>
                     <img href="" src="assets/img/sura.png" alt="">
                     <a href="https://discord.gg/PmK9wBJwVm?dhc-id=81853813656391729" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
+                <div class="trabajos swiper-slide">
                     <h3>Mecanico</h3>
                     <p>Zona de mecanicos</p>
                     <img href="" src="assets/img/meca.png" alt="">
                     <a href="https://discord.gg/CSq7CPFsGW?dhc-id=81854734285148174" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
+                <div class="trabajos swiper-slide">
                     <h3>Taxi / Bus</h3>
                     <p>Zona de taxi</p>
                     <img href="" src="assets/img/taxi1.png" alt="">
                     <a href="https://discord.gg/qpcQfHSMdJ?dhc-id=81855145121419291" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
-                    <h3>Abogado / Juez</h3>
+                <div class="trabajos swiper-slide">
+                    <h3>Abogado</h3>
                     <p>Juego externo</p>
                     <img href="" src="assets/img/juez.png" alt="">
                     <a href="https://discord.gg/jBy2fZypcC?dhc-id=81855433911832679" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
+                <div class="trabajos swiper-slide">
                     <h3>Periodista</h3>
                     <p>Zona de noticiero</p>
                     <img href="" src="assets/img/rcn.png" alt="">
                     <a href="https://discord.gg/E6T8mYsf3W?dhc-id=81855775722442823" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
+                <div class="trabajos swiper-slide">
                     <h3>Alcaldia</h3>
                     <p>Juego externo</p>
                     <img href="" src="assets/img/alcaldia.jpg" alt="">
                     <a href="https://discord.com/invite/aawbmeWAFs?dhc-id=81856115804999761" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
-                    <h3>Guardia de prision</h3>
+                <div class="trabajos swiper-slide">
+                    <h3>Guardia</h3>
                     <p>Prision</p>
                     <img href="" src="assets/img/inpec.png" alt="">
                     <a href="https://discord.com/invite/bMYJTJ7dSX?dhc-id=81856435675205748" target="_blank">Más información</a>
                 </div>
-                <div class="trabajos">
+                <div class="trabajos swiper-slide">
                     <h3>Bombero</h3>
                     <p>Zona de bomberos</p>
                     <img href="" src="assets/img/bombero.png" alt="">
                     <a href="https://discord.com/invite/Nudd4PvkC5?dhc-id=81856770351304723" target="_blank">Más información</a>
                 </div>
-
             </div>
-        </section>
+        </div>
+        <div class="swiper-pagination p1"></div>
     </div>
 <!-- Trabajos final -->
 
@@ -355,15 +357,17 @@
 </footer>
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2992617549812829"
+     crossorigin="anonymous"></script>
 <script src="assets/js/avatar.js"></script> 
 <script src="assets/js/ocultar.js"></script> 
 <script src="assets/js/halloween-bats.js"></script> 
 <script src="assets/js/halloweenBats.js"></script> 
 <script src="assets/js/leermas.js"></script> 
 <script src="assets/js/miembros.js"></script> 
+<script src="assets/js/slider.js"></script> 
 <script src="assets/js/barra.js"></script> 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2992617549812829"
-     crossorigin="anonymous"></script>
 
 </body>
 </html>
