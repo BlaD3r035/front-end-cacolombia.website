@@ -1,8 +1,8 @@
 function redirectToPoliceDatabase() {
-    window.location.href = 'police-database/index.html';
+    window.location.href = 'https://www.cacolombia.website/v1/login';
 }
 function redirectToPublicPage(){
-    window.location.href = 'public-page/index.html';
+    window.location.href = 'https://www.cacolombia.website/public/v1/showRecords';
 }
 
 function redirectToMiniJusticiaPage(){
