@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     users.forEach(user => {
-        const avatarUrl = `https://dbcacolombia.discloud.app/avatar/${user.id}`; 
+        const avatarUrl = `https://cacolombia.website/avatar/${user.id}`; 
         const imgElement = document.getElementById(user.imgId);
 
         if (imgElement) {
