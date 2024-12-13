@@ -152,6 +152,79 @@ h1 {
         50% { opacity: 0; } 
     }
 
+/* Caja reconocimientos */
+    .container-reconocimientos {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px;
+        background-color: rgba(50, 50, 50, 0.8);
+        color: #fff;
+        border-radius: 10px;
+        margin-top: 20px;
+        bottom: -20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        position: relative;
+        float: left;
+        left: 3%;
+    }
+
+    .caja-reco h2 {
+        font-size: 24px;
+        margin: 0;
+        color: #eed12f;
+    }
+
+    .caja-reco p {
+        font-size: 56px;
+        line-height: 0.2;
+        font-weight: bold;
+        color: #ddd;
+    }
+
+    .caja-reco img {
+        height: auto;
+        width: 220px;
+        position: relative;
+        margin-bottom: 25px;
+    }
+
+    .reconocimientos-list {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .reconocimientos-boton {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .reconocimiento {
+        width: 250px;
+        background-color: #CE800E;
+        padding: 15px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .reconocimiento:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .reconocimiento h3 {
+        font-size: 18px;
+        margin: 5px 0;
+        color: #fff;
+    }
+
+    .reconocimiento a.boton-categorias:hover {
+        background-color: #d1b100;
+    }
+
 /* Caja banner */
     .caja-banner {
         background-color: #333;
@@ -719,6 +792,38 @@ nav {
         height: auto;
         width: 100%;
     }
+
+/* Caja reco */
+    .container-reconocimientos {
+        left: -10px;
+    }
+
+    .caja-reco h2 {
+        font-size: 16px;
+    }
+
+    .caja-reco p {
+        font-size: 30px;
+        line-height: 0.2;
+    }
+
+    .caja-reco img {
+        width: 100px;
+    }
+
+    .reconocimientos-list {
+        margin-top: 40px;
+        gap: 15px;
+    }
+
+    .reconocimiento {
+        width: 150px;
+    }
+
+    .reconocimiento h3 {
+        font-size: 13px;
+    }
+
 /* Barra navegacion */
     nav ul li a {
         padding: 14px 10px;
@@ -738,7 +843,7 @@ nav {
     }
 /* Caja perfil */
     .caja-perfil {
-        width: 25%;
+        width: 24%;
         right: 5%;
     }
         
@@ -989,7 +1094,7 @@ footer {
     background-color: #333;
     color: white;
     position: relative;
-    bottom: -20px;
+    bottom: -180px;
     width: 100%;
     clear: both;
 }
